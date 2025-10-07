@@ -7,6 +7,8 @@ pipeline {
     }
     environment {
         DOCKER_IMAGE = 'trivialflea/demo-app:jma-3.0'
+        DOCKER_USER = credentials('docker-username')
+        DOCKER_PASS = credentials('docker-password')
     }
     stages {
         stage("Initialize") {
